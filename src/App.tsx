@@ -148,6 +148,9 @@ const App: React.FC = () => {
                       src={user.avatar}
                       alt={`${user.firstname} ${user.lastname}`}
                       className="image-item"
+                      onError={() => {
+                        setUsers(users.map(u => u.id === user.id ? { ...u, avatar: 'https://via.placeholder.com/128x128?text=No%20Image' } : u));
+                      }}
                     />
                   </figure>
                 </div>
