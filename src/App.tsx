@@ -141,18 +141,13 @@ const App: React.FC = () => {
         <div className="columns is-multiline">
           {paginatedUsers.map(user => (
             <div key={user.id} className="column is-one-quarter-fullhd is-one-third-desktop is-half-tablet">
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+              <div className="card card-user">
                 <div className="card-image">
-                  <figure className="image is-128x128 is-inline-block" style={{ margin: '0 auto' }}>
+                  <figure className="image is-128x128 is-inline-block image-figure">
                     <img
                       src={user.avatar}
                       alt={`${user.firstname} ${user.lastname}`}
-                      style={{
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        width: '100%',
-                        height: 'auto',
-                      }}
+                      className="image-item"
                     />
                   </figure>
                 </div>
@@ -201,24 +196,21 @@ const App: React.FC = () => {
           <div className={`modal ${isModalActive ? 'is-active' : ''}`} role="dialog">
             <div className="modal-background" onClick={handleCloseModal}></div>
             <div className="modal-content">
-              <div className="box" style={{ textAlign: 'center' }}>
-                <figure className="image is-128x128" style={{ margin: '0 auto' }}>
+              <div className="box box-user">
+                <figure className="image is-128x128 image-figure">
                   <img
                     src={selectedUser.avatar}
                     alt={`${selectedUser.firstname} ${selectedUser.lastname}`}
-                    style={{
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      width: '100%',
-                      height: 'auto',
-                    }}
+                    className="image-item"
                   />
                 </figure>
-                <h2 className="title is-4">{selectedUser.firstname} {selectedUser.lastname}</h2>
+                <h2 className="title is-4 title-user">{selectedUser.firstname} {selectedUser.lastname}</h2>
                 <p className="subtitle is-6">{selectedUser.role}</p>
                 <p><strong>Email:</strong> {selectedUser.email}</p>
                 <p><strong>Username:</strong> {selectedUser.username}</p>
                 <p><strong>Join Date:</strong> {selectedUser.join_date}</p>
+                <p>&nbsp;</p>
+                <p><strong>Description:</strong></p>
                 <p>{selectedUser.description}</p>
               </div>
             </div>

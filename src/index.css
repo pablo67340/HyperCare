@@ -10,3 +10,35 @@ body {
 .main-container {
   padding-top: 2rem;
 }
+
+.modal-content {
+  padding-bottom: 1rem;
+}
+
+.image-figure {
+  margin: 0 auto;
+}
+
+.card-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-item {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.box-user {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.title-user{
+  padding-top: 1rem;
+}
