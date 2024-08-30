@@ -9,6 +9,10 @@ body {
 
 .main-container {
   padding-top: 2rem;
+
+  @media (max-width: 1024px) {
+    padding: 2rem;
+  }
 }
 
 .modal-content {
