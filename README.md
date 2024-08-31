@@ -16,8 +16,8 @@ Follow these steps to get the project up and running on your local machine:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/user-profiles-pagination.git
-    cd user-profiles-pagination
+    git clone https://github.com/pablo67340/HyperCare.git
+    cd HypderCare
     ```
 
 2. **Install dependencies**:
